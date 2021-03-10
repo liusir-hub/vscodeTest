@@ -8,8 +8,44 @@
 </head>
 
 <body>
-  sdf
-  //affaaf
+  <script>
+    var num = 0;
+    var a = prompt().toString().split(',')
+    console.log(a)
+    switch (a[1]) { //switch条件语句执行的是严格相等，没有隐士转换
+      case '12':
+        num += 31;
+      case '11':
+        num += 30;
+      case '10':
+        num += 31;
+      case '9':
+        num += 30;
+      case '8':
+        num += 31;
+      case '7':
+        num += 31;
+      case '6':
+        num += 30;
+      case '5':
+        num += 31;
+      case '4':
+        num += 30;
+      case '3':
+        num += 31;
+      case '2':
+        if (a[0] % 4 == 0 && a[0] % 100 !== 0 || a[0] % 400 == 0) {
+          num += 29;
+        } else {
+          num += 28;
+        }
+        case '1':
+          num += 31;
+          console.log(num)
+          break;
+    }
+    alert(num)
+  </script>
 </body>
 
 </html>
